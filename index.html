@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+<title>DPMPTSP KABUPATEN PURBALINGGA – Pelopor Pelayanan Terpadu Satu Pintu</title>
+<link rel="icon" type="image/png" href="https://dpmptsp.purbalinggakab.go.id/wp-content/uploads/2022/11/LOGO-DPMPTSP.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;font-size:13px;color:#333;background:#f2f2f2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* TOPBAR */
+#topbar{background:#55b6cd;padding:5px 0;border-bottom:1px solid #16325a}
+#topbar .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:center;justify-content:space-between}
+.tb-left{color:rgba(255,255,255,.78);font-size:11.5px;display:flex;align-items:center;gap:14px}
+.tb-left span{display:flex;align-items:center;gap:5px}
+.tb-left i{color:#fa7114}
+.tb-right{display:flex;align-items:center;gap:6px}
+.tb-right a{width:24px;height:24px;border-radius:3px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);color:#fff;font-size:12px;transition:.2s}
+.tb-right a:hover{background:#fa7114}
+.tb-right .login-btn{padding:0 10px;width:auto;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,.25);border-radius:3px;background:transparent;color:rgba(255,255,255,.82);display:flex;align-items:center;gap:5px;height:24px}
+.tb-right .login-btn:hover{background:#fa7114;border-color:#fa7114;color:#fff}
+
+/* HEADER */
+#header{background:#fff;padding:10px 0;border-bottom:3px solid #55b6cd;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+#header .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:14px}
+.logo-img{width:82px;height:82px;object-fit:contain;flex-shrink:0}
+.site-info .site-name{font-size:21px;font-weight:700;color:#55b6cd;line-height:1.2;text-transform:uppercase;letter-spacing:.2px}
+.site-info .site-sub{font-size:12px;color:#555;margin-top:4px;font-style:italic}
+.site-info .site-tag{display:inline-block;margin-top:6px;background:#55b6cd;color:#fff;font-size:10px;font-weight:700;padding:2px 10px;border-radius:2px;text-transform:uppercase;letter-spacing:.5px}
+.header-right{margin-left:auto;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.search-box{display:flex;border:1px solid #ccc;border-radius:3px;overflow:hidden}
+.search-box input{border:none;padding:6px 10px;font-size:12px;outline:none;width:185px;font-family:inherit}
+.search-box button{background:#55b6cd;border:none;padding:0 12px;cursor:pointer;color:#fff;font-size:12px}
+.search-box button:hover{background:#fa7114}
+.header-contact{font-size:11.5px;color:#666;display:flex;align-items:center;gap:12px}
+.header-contact span{display:flex;align-items:center;gap:4px}
+.header-contact i{color:#fa7114}
+
+/* NAVBAR */
+#navbar{background:#55b6cd;position:sticky;top:0;z-index:999;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+#navbar .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:stretch}
+.home-icon{display:flex;align-items:center;justify-content:center;padding:0 16px;background:#fa7114;color:#fff;font-size:16px;transition:.2s;flex-shrink:0}
+.home-icon:hover{background:#d4900a}
+.nav-list{list-style:none;display:flex;flex-wrap:wrap}
+.nav-list>li{position:relative}
+.nav-list>li>a{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.92);padding:13px 14px;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;border-right:1px solid rgba(255,255,255,.08);transition:.18s;white-space:nowrap}
+.nav-list>li>a:hover,.nav-list>li>a.active{background:#fa7114;color:#fff}
+.nav-list>li>a .caret{font-size:9px;margin-left:2px}
+.nav-list>li .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:235px;box-shadow:0 6px 18px rgba(0,0,0,.18);border-top:3px solid #fa7114;z-index:1000}
+.nav-list>li:hover .dropdown{display:block}
+.nav-list .dropdown li a{display:flex;align-items:center;gap:7px;padding:9px 14px;color:#333;font-size:12.5px;border-bottom:1px solid #f4f4f4;transition:.15s}
+.nav-list .dropdown li a:hover{background:#fa7114;color:#fff;padding-left:20px}
+.nav-list .dropdown li a i{font-size:10px;color:#55b6cd}
+.nav-list .dropdown li a:hover i{color:#fff}
+
+/* SURVEY BAR */
+#survey-bar{background:#27ae60;padding:7px 0;color:#fff;font-size:12px;text-align:center}
+#survey-bar a{color:#fff;font-weight:700;text-decoration:underline;margin-left:6px}
+#survey-bar a:hover{color:#d4fde6}
+
+/* TICKER */
+#ticker{background:#fff3cd;border-bottom:1px solid #e0cc7a;padding:6px 0;overflow:hidden}
+#ticker .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:12px;overflow:hidden}
+.ticker-label{background:#55b6cd;color:#fff;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:2px;white-space:nowrap;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.ticker-track{overflow:hidden;flex:1}
+.ticker-inner{white-space:nowrap;color:#555;font-size:12.5px;animation:tick 40s linear infinite}
+@keyframes tick{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+
+/* SLIDER */
+#slider{position:relative;overflow:hidden;height:400px;background:#0d2249}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;display:flex;align-items:center;justify-content:center}
+.slide.active{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.52)}
+.slide-caption{position:absolute;text-align:center;color:#fff;padding:0 30px;max-width:760px}
+.slide-caption h2{font-size:30px;font-weight:700;line-height:1.35;text-shadow:0 2px 14px rgba(0,0,0,.65);margin-bottom:12px}
+.slide-caption p{font-size:14px;opacity:.9;line-height:1.7;margin-bottom:18px}
+.btn-slide{display:inline-block;padding:9px 26px;margin:4px;font-size:12.5px;font-weight:700;text-transform:uppercase;border-radius:3px;transition:.2s}
+.btn-slide.primary{background:#fa7114;color:#fff}
+.btn-slide.primary:hover{background:#d4900a}
+.btn-slide.outline{border:2px solid rgba(255,255,255,.85);color:#fff}
+.btn-slide.outline:hover{background:rgba(255,255,255,.15)}
+.slider-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
+.slider-dots span{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:.2s}
+.slider-dots span.active{background:#fa7114;transform:scale(1.2)}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;background:rgba(0,0,0,.35);color:#fff;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:5;border-radius:2px;transition:.2s}
+.slider-arrow:hover{background:#fa7114}
+.slider-arrow.prev{left:14px}
+.slider-arrow.next{right:14px}
+
+/* QUICK BAR */
+#quick-bar{background:#fa7114;border-bottom:3px solid #d4900a}
+#quick-bar .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:grid;grid-template-columns:repeat(4,1fr)}
+.qb-item{display:flex;align-items:center;gap:12px;padding:14px 18px;color:#fff;cursor:pointer;border-right:1px solid rgba(255,255,255,.25);transition:.18s}
+.qb-item:last-child{border-right:none}
+.qb-item:hover{background:rgba(0,0,0,.12)}
+.qb-icon{font-size:28px;flex-shrink:0}
+.qb-text strong{display:block;font-size:13px;font-weight:700;line-height:1.3}
+.qb-text span{font-size:11px;opacity:.88}
+
+/* MAIN */
+#main{max-width:1170px;margin:22px auto 24px;padding:0 15px;display:grid;grid-template-columns:1fr 295px;gap:20px}
+
+/* SECTION HEAD */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.sec-head h3{font-size:15px;font-weight:700;color:#55b6cd;padding-left:10px;border-left:4px solid #fa7114;line-height:1}
+.sec-head a.more{font-size:11.5px;font-weight:700;color:#fa7114;text-transform:uppercase;letter-spacing:.3px}
+.sec-head a.more:hover{text-decoration:underline}
+
+/* BOX WHITE */
+.box-white{background:#fff;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,.09);padding:18px;margin-bottom:18px}
+
+/* SAMBUTAN */
+.sambutan-wrap{display:flex;gap:18px;align-items:flex-start}
+.sambutan-img{width:130px;flex-shrink:0;border:3px solid #55b6cd;border-radius:3px;overflow:hidden}
+.sambutan-img img{width:100%;display:block}
+.sambutan-text p{font-size:12.5px;color:#555;line-height:1.85;margin-bottom:9px}
+.sambutan-sign{margin-top:12px;border-top:1px solid #eee;padding-top:10px}
+.sambutan-sign strong{display:block;font-size:13px;color:#55b6cd;font-weight:700}
+.sambutan-sign span{font-size:11.5px;color:#777}
+
+/* INOVASI */
+.inovasi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.inov-card{background:#fff;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,.09);overflow:hidden;transition:.2s}
+.inov-card:hover{transform:translateY(-3px);box-shadow:0 5px 14px rgba(0,0,0,.14)}
+.inov-img{height:120px;overflow:hidden;position:relative}
+.inov-img img{width:100%;height:100%;object-fit:cover}
+.inov-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),transparent)}
+.inov-badge{position:absolute;top:8px;left:8px;background:#fa7114;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:2px;text-transform:uppercase}
+.inov-body{padding:12px}
+.inov-body h4{font-size:13px;font-weight:700;color:#55b6cd;margin-bottom:5px}
+.inov-body p{font-size:11.5px;color:#666;line-height:1.6}
+
+/* BERITA */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:8px}
+.news-card{background:#fff;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,.09);overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.news-card:hover{transform:translateY(-3px);box-shadow:0 5px 14px rgba(0,0,0,.13)}
+.nc-img{height:148px;overflow:hidden;position:relative;flex-shrink:0}
+.nc-img img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.news-card:hover .nc-img img{transform:scale(1.05)}
+.nc-cat{position:absolute;top:8px;left:8px;background:#55b6cd;color:#fff;font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:2px;text-transform:uppercase}
+.nc-body{padding:11px 12px;flex:1;display:flex;flex-direction:column}
+.nc-meta{font-size:11px;color:#999;margin-bottom:5px;display:flex;gap:10px}
+.nc-meta i{color:#fa7114;margin-right:3px}
+.nc-title{font-size:12.5px;font-weight:700;color:#55b6cd;line-height:1.45;margin-bottom:6px}
+.nc-excerpt{font-size:11.5px;color:#666;line-height:1.6;flex:1}
+.nc-link{display:inline-flex;align-items:center;gap:4px;color:#fa7114;font-size:11px;font-weight:700;text-transform:uppercase;margin-top:8px}
+.nc-link:hover{text-decoration:underline}
+
+/* PENGUMUMAN */
+.ann-list{background:#fff;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,.09);overflow:hidden}
+.ann-item{display:flex;gap:12px;padding:11px 14px;border-bottom:1px solid #f0f0f0;align-items:flex-start;transition:.15s}
+.ann-item:last-child{border-bottom:none}
+.ann-item:hover{background:#fffbf0}
+.ann-date{background:#55b6cd;color:#fff;text-align:center;padding:5px 9px;border-radius:3px;min-width:42px;flex-shrink:0;line-height:1.1}
+.ann-date strong{display:block;font-size:17px;font-weight:700}
+.ann-date span{display:block;font-size:9.5px;text-transform:uppercase;opacity:.9}
+.ann-text h4{font-size:12.5px;color:#55b6cd;font-weight:700;margin-bottom:3px;line-height:1.4}
+.ann-text p{font-size:11.5px;color:#888;line-height:1.5}
+
+/* SIDEBAR */
+.sidebar>.widget{background:#fff;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,.09);overflow:hidden;margin-bottom:18px}
+.wid-head{background:#55b6cd;color:#fff;padding:9px 14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:7px}
+.wid-head i{color:#fa7114}
+.wid-body{padding:13px}
+.link-list{list-style:none}
+.link-list li{border-bottom:1px solid #f2f2f2}
+.link-list li:last-child{border-bottom:none}
+.link-list li a{display:flex;align-items:center;gap:7px;padding:8px 3px;color:#333;font-size:12.5px;transition:.15s}
+.link-list li a:hover{color:#fa7114;padding-left:8px}
+.link-list li a i{color:#55b6cd;font-size:10px}
+.link-list li a:hover i{color:#fa7114}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.stat-item{background:linear-gradient(135deg,#55b6cd,#2962a8);color:#fff;border-radius:4px;padding:14px 10px;text-align:center}
+.stat-num{font-size:22px;font-weight:700;color:#fa7114;line-height:1}
+.stat-label{font-size:10.5px;opacity:.85;margin-top:3px;line-height:1.3}
+.galeri-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.galeri-cell{height:68px;overflow:hidden;border-radius:2px;cursor:pointer}
+.galeri-cell img{width:100%;height:100%;object-fit:cover;transition:.3s}
+.galeri-cell:hover img{transform:scale(1.1);opacity:.85}
+.kontak-list{list-style:none}
+.kontak-list li{display:flex;gap:9px;padding:7px 0;border-bottom:1px solid #f2f2f2;font-size:12px;color:#444;align-items:flex-start}
+.kontak-list li:last-child{border-bottom:none}
+.kontak-list li i{color:#fa7114;margin-top:2px;width:15px;text-align:center;flex-shrink:0}
+.agenda-list{list-style:none}
+.agenda-list li{display:flex;gap:9px;padding:8px 0;border-bottom:1px solid #f2f2f2;align-items:flex-start}
+.agenda-list li:last-child{border-bottom:none}
+.ag-dot{width:8px;height:8px;background:#fa7114;border-radius:50%;flex-shrink:0;margin-top:4px}
+.ag-info{font-size:12px;color:#555;line-height:1.5}
+.ag-date{font-size:10.5px;font-weight:700;color:#55b6cd;display:block;margin-bottom:1px}
+.mitra-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mitra-btn{background:#f5f5f5;border:1px solid #ddd;border-radius:3px;padding:8px 6px;text-align:center;font-size:10.5px;font-weight:700;color:#55b6cd;cursor:pointer;transition:.18s;line-height:1.3}
+.mitra-btn:hover{background:#55b6cd;color:#fff;border-color:#55b6cd}
+
+/* FOOTER */
+#footer-top{background:#55b6cd;color:#fff;padding:32px 0 20px}
+#footer-top .wrap{max-width:1170px;margin:0 auto;padding:0 15px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:28px}
+.fw h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:13px;padding-bottom:7px;border-bottom:2px solid #fa7114;color:#f5d580}
+.fw-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.fw-logo{width:58px;height:58px;object-fit:contain;filter:brightness(1.1)}
+.fw-site-name{font-size:13px;font-weight:700;line-height:1.3}
+.fw p{font-size:12px;line-height:1.85;color:rgba(255,255,255,.72);margin-bottom:10px}
+.fw ul{list-style:none}
+.fw ul li{margin-bottom:6px}
+.fw ul li a{color:rgba(255,255,255,.7);font-size:12px;display:flex;align-items:center;gap:6px;transition:.15s}
+.fw ul li a:hover{color:#fa7114;padding-left:4px}
+.fw ul li a i{font-size:10px;color:#fa7114}
+.fw-contact-line{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:rgba(255,255,255,.72);margin-bottom:7px;line-height:1.6}
+.fw-contact-line i{color:#fa7114;margin-top:2px;width:14px;flex-shrink:0}
+.social-row{display:flex;gap:7px;margin-top:12px}
+.social-row a{width:30px;height:30px;border-radius:3px;background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;transition:.18s}
+.social-row a:hover{background:#fa7114}
+#footer-bottom{background:#0e2748;color:rgba(255,255,255,.55);text-align:center;padding:11px 0;font-size:11.5px}
+#footer-bottom strong{color:#fa7114}
+#footer-bottom a{color:rgba(255,255,255,.55)}
+#footer-bottom a:hover{color:#fa7114}
+
+/* BACK TO TOP */
+#btt{position:fixed;bottom:18px;right:18px;z-index:999;width:36px;height:36px;background:#55b6cd;color:#fff;border:none;border-radius:3px;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:15px;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:.2s}
+#btt:hover{background:#fa7114}
+
+/* RESPONSIVE */
+@media(max-width:900px){#main{grid-template-columns:1fr}.inovasi-grid{grid-template-columns:1fr 1fr}#footer-top .wrap{grid-template-columns:1fr 1fr}#quick-bar .wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){#header .wrap{flex-wrap:wrap}.header-right{display:none}.news-grid{grid-template-columns:1fr}.inovasi-grid{grid-template-columns:1fr}#footer-top .wrap{grid-template-columns:1fr}.nav-list{display:none}#slider{height:260px}.slide-caption h2{font-size:20px}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><i class="fas fa-calendar-alt"></i> Jumat, 20 Maret 2026</span>
+      <span><i class="fas fa-map-marker-alt"></i> Purbalingga, Jawa Tengah</span>
+      <span><i class="fas fa-clock"></i> 08:45 WIB</span>
+    </div>
+    <div class="tb-right">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="login-btn"><i class="fas fa-user"></i> Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap">
+    <img src="https://dpmptsp.purbalinggakab.go.id/wp-content/uploads/2022/11/LOGO-DPMPTSP.png"
+         alt="Logo DPMPTSP Kabupaten Purbalingga" class="logo-img"
+         onerror="this.style.background='#55b6cd';this.style.padding='8px';">
+    <div class="site-info">
+      <div class="site-name">DPMPTSP Kabupaten Purbalingga</div>
+      <div class="site-sub">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</div>
+      <span class="site-tag">⭐ Pelopor Pelayanan Terpadu Satu Pintu</span>
+    </div>
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" placeholder="Cari informasi...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="header-contact">
+        <span><i class="fas fa-phone"></i> (0281) 891-235</span>
+        <span><i class="fas fa-envelope"></i> dpmptsp@purbalinggakab.go.id</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="wrap">
+    <a href="#" class="home-icon"><i class="fas fa-home"></i></a>
+    <ul class="nav-list">
+      <li><a href="#" class="active">Beranda</a></li>
+      <li>
+        <a href="#">Profil <i class="fas fa-caret-down caret"></i></a>
+        <ul class="dropdown">
+          <li><a href="#"><i class="fas fa-angle-right"></i> Sejarah</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Visi &amp; Misi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Tugas &amp; Fungsi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Struktur Organisasi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Pejabat DPMPTSP</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Maklumat Pelayanan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Zona Integritas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Perizinan <i class="fas fa-caret-down caret"></i></a>
+        <ul class="dropdown">
+          <li><a href="#"><i class="fas fa-angle-right"></i> Jenis Izin</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Persyaratan Izin</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Alur Perizinan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Daftar Izin Terbit</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> OSS – Online Single Submission</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> SiPurba</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> SIPP</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Penanaman Modal <i class="fas fa-caret-down caret"></i></a>
+        <ul class="dropdown">
+          <li><a href="#"><i class="fas fa-angle-right"></i> Potensi Investasi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Peluang Usaha</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Data Investasi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> LKPM Online</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Berita <i class="fas fa-caret-down caret"></i></a>
+        <ul class="dropdown">
+          <li><a href="#"><i class="fas fa-angle-right"></i> Berita Terbaru</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Pengumuman</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Agenda Kegiatan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Galeri Foto</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Unduhan <i class="fas fa-caret-down caret"></i></a>
+        <ul class="dropdown">
+          <li><a href="#"><i class="fas fa-angle-right"></i> Formulir Permohonan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Peraturan &amp; Regulasi</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Laporan Tahunan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Dokumen SIPP</a></li>
+        </ul>
+      </li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- SURVEY BAR -->
+<div id="survey-bar">
+  <i class="fas fa-poll"></i>
+  Gunakan tautan ini untuk pengisian <strong>Formulir Survey Kepuasan Masyarakat</strong> sebagai Parameter kinerja DPMPTSP dalam bidang pelayanan publik.
+  <a href="#">Isi Survey Sekarang &raquo;</a>
+</div>
+
+<!-- TICKER -->
+<div id="ticker">
+  <div class="wrap">
+    <div class="ticker-label">Pengumuman</div>
+    <div class="ticker-track">
+      <div class="ticker-inner">
+        Pelayanan perizinan DPMPTSP kini dapat diakses secara online melalui aplikasi SiPurba &nbsp;▪&nbsp;
+        NIB dapat diproses melalui OSS (Online Single Submission) di oss.go.id &nbsp;▪&nbsp;
+        Saklar Lampu: dapatkan NIB &amp; Sertifikat Standar dalam waktu kurang dari 1 jam &nbsp;▪&nbsp;
+        Konsultasi LKPM: Hubungi Goa Lawa via WhatsApp &nbsp;▪&nbsp;
+        Jam Pelayanan: Senin–Kamis 07.30–15.30 WIB | Jumat 07.30–11.00 WIB &nbsp;▪&nbsp;
+        DPMPTSP Kabupaten Purbalingga : Jl. Mayjend Sungkono KM,2 Kalimanah Telp/Fax 0281-891235 Purbalingga 53371
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDER -->
+<div id="slider">
+  <div class="slide active">
+    <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1400&q=80" alt="Pelayanan Publik Purbalingga">
+    <div class="slide-caption">
+      <h2>Selamat Datang di Website Resmi<br>DPMPTSP Kabupaten Purbalingga</h2>
+      <p>Memberikan pelayanan perizinan dan penanaman modal yang cepat, mudah, transparan dan akuntabel demi kemajuan Kabupaten Purbalingga.</p>
+      <a href="#" class="btn-slide primary">Layanan Perizinan</a>
+      <a href="#" class="btn-slide outline">Informasi Investasi</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1400&q=80" alt="Zona Integritas WBK WBBM">
+    <div class="slide-caption">
+      <h2>DPMPTSP Menuju Wilayah Bebas<br>dari Korupsi (WBK) &amp; WBBM</h2>
+      <p>Penilaian Zona Integritas oleh Tim Penilai KemenPAN-RB sebagai wujud komitmen pelayanan publik yang bersih, transparan dan profesional di Kabupaten Purbalingga.</p>
+      <a href="#" class="btn-slide primary">Selengkapnya</a>
+      <a href="#" class="btn-slide outline">Profil DPMPTSP</a>
+    </div>
+  </div>
+  <div class="slide">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1400&q=80" alt="Inovasi Digital SiPurba">
+    <div class="slide-caption">
+      <h2>Inovasi SiPURBA:<br>Perizinan Terintegrasi Digital</h2>
+      <p>Sistem Informasi Pelayanan Untuk Reformasi Birokrasi yang Akuntabel — mengintegrasikan perizinan, pajak reklame, dan pengawasan lapangan secara real time.</p>
+      <a href="#" class="btn-slide primary">Daftar SiPurba</a>
+      <a href="#" class="btn-slide outline">Pelajari Lebih</a>
+    </div>
+  </div>
+
+  <button class="slider-arrow prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+  <button class="slider-arrow next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+  <div class="slider-dots" id="sliderDots">
+    <span class="active" onclick="goSlide(0)"></span>
+    <span onclick="goSlide(1)"></span>
+    <span onclick="goSlide(2)"></span>
+  </div>
+</div>
+
+<!-- QUICK BAR -->
+<div id="quick-bar">
+  <div class="wrap">
+    <div class="qb-item">
+      <div class="qb-icon"><i class="fas fa-laptop-code"></i></div>
+      <div class="qb-text"><strong>Perizinan Online</strong><span>Daftar &amp; urus izin secara online</span></div>
+    </div>
+    <div class="qb-item">
+      <div class="qb-icon"><i class="fas fa-search-plus"></i></div>
+      <div class="qb-text"><strong>Cek Status Izin</strong><span>Pantau perkembangan permohonan</span></div>
+    </div>
+    <div class="qb-item">
+      <div class="qb-icon"><i class="fas fa-file-download"></i></div>
+      <div class="qb-text"><strong>Download Formulir</strong><span>Unduh dokumen persyaratan</span></div>
+    </div>
+    <div class="qb-item">
+      <div class="qb-icon"><i class="fas fa-headset"></i></div>
+      <div class="qb-text"><strong>Pengaduan</strong><span>Sampaikan keluhan &amp; saran</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- KONTEN KIRI -->
+  <div class="content">
+
+    <!-- SAMBUTAN -->
+    <div class="sec-head"><h3><i class="fas fa-user-tie" style="margin-right:6px;color:#fa7114;"></i>Sambutan Kepala DPMPTSP</h3></div>
+    <div class="box-white">
+      <div class="sambutan-wrap">
+        <div class="sambutan-img">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Kepala DPMPTSP Purbalingga">
+        </div>
+        <div class="sambutan-text">
+          <p>Di Era digitalisasi kebutuhan akan informasi merupakan salah satu kebutuhan pokok. Masyarakat yang berperilaku <em>mobile</em> membutuhkan saluran komunikasi yang <em>real time</em>. Untuk itu DPMPTSP telah membentuk suatu wadah berupa website DPMPTSP Kabupaten Purbalingga, sebagai media komunikasi dalam memenuhi kebutuhan dimaksud.</p>
+          <p>Website ini memuat beberapa konten berkenaan dengan Informasi dan gambaran terhadap pelayanan publik pada Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Kabupaten Purbalingga. Diharapkan melalui Website ini kiranya masyarakat dapat mengetahui seluruh informasi tentang Kebijakan Pemerintah Kabupaten Purbalingga dalam urusan penanaman modal dan pelayanan perizinan dan non perizinan di wilayah Kabupaten Purbalingga.</p>
+          <p>Kritik dan saran yang ada sangat kami harapkan guna penyempurnaan Website ini dimasa datang. Semoga keberadaan Website ini dapat memberikan manfaat bagi kita semua.</p>
+          <div class="sambutan-sign">
+            <strong>Much Umar Faozi, S.H., M.Si.</strong>
+            <span>Kepala DPMPTSP Kabupaten Purbalingga</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INOVASI -->
+    <div class="sec-head"><h3><i class="fas fa-lightbulb" style="margin-right:6px;color:#fa7114;"></i>Inovasi Unggulan</h3><a href="#" class="more">Lihat Semua &raquo;</a></div>
+    <div class="inovasi-grid">
+      <div class="inov-card">
+        <div class="inov-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="SiPurba">
+          <div class="inov-overlay"></div>
+          <span class="inov-badge">Inovasi</span>
+        </div>
+        <div class="inov-body">
+          <h4><i class="fas fa-mobile-alt" style="color:#fa7114;margin-right:5px;"></i>SiPURBA</h4>
+          <p>Sistem Informasi Pelayanan Untuk Reformasi Birokrasi yang Akuntabel — mengintegrasikan perizinan, pajak reklame, dan pengawasan lapangan secara digital dan <em>real time</em>.</p>
+        </div>
+      </div>
+      <div class="inov-card">
+        <div class="inov-img">
+          <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Goa Lawa">
+          <div class="inov-overlay"></div>
+          <span class="inov-badge">Inovasi</span>
+        </div>
+        <div class="inov-body">
+          <h4><i class="fab fa-whatsapp" style="color:#25d366;margin-right:5px;"></i>Goa Lawa</h4>
+          <p>Gerai Online Konsultasi LKPM by WA — membantu pelaku usaha konsultasi pelaporan kegiatan penanaman modal melalui grup WhatsApp kapanpun dan dimanapun.</p>
+        </div>
+      </div>
+      <div class="inov-card">
+        <div class="inov-img">
+          <img src="https://images.unsplash.com/photo-1664575600850-c4b712e80ea3?w=600&q=80" alt="Saklar Lampu">
+          <div class="inov-overlay"></div>
+          <span class="inov-badge">Inovasi</span>
+        </div>
+        <div class="inov-body">
+          <h4><i class="fas fa-bolt" style="color:#fa7114;margin-right:5px;"></i>Saklar Lampu</h4>
+          <p>Seketika Kelar Layanan Mikro Perizinan Berusaha — pelaku UMK memperoleh NIB dan Sertifikat Standar dalam waktu kurang dari 1 jam hanya dengan NIK dan nomor WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BERITA -->
+    <div class="sec-head" style="margin-top:6px;"><h3><i class="fas fa-newspaper" style="margin-right:6px;color:#fa7114;"></i>Berita Terkini</h3><a href="#" class="more">Lihat Semua &raquo;</a></div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="nc-img">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Zona Integritas">
+          <span class="nc-cat">Berita</span>
+        </div>
+        <div class="nc-body">
+          <div class="nc-meta"><span><i class="fas fa-calendar"></i>07 Oktober 2024</span><span><i class="fas fa-user"></i>Admin</span></div>
+          <div class="nc-title">DPMPTSP Purbalingga Lakukan Penilaian Zona Integritas Menuju WBK dan WBBM</div>
+          <div class="nc-excerpt">Penilaian ZI dilaksanakan oleh Tim Penilai KemenPAN-RB secara virtual di Operation Room Graha Adiguna sebagai wujud komitmen pemberantasan korupsi dan pelayanan prima.</div>
+          <a href="#" class="nc-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img">
+          <img src="https://images.unsplash.com/photo-1536925155833-43e0f3cb7a08?w=600&q=80" alt="Pengawasan Perizinan">
+          <span class="nc-cat">Kegiatan</span>
+        </div>
+        <div class="nc-body">
+          <div class="nc-meta"><span><i class="fas fa-calendar"></i>04 Maret 2024</span><span><i class="fas fa-user"></i>Admin</span></div>
+          <div class="nc-title">DPMPTSP Menggandeng DPUPR, DLH dan Dinpertan dalam Kegiatan Pengawasan Perizinan Berusaha Berbasis Risiko Sektor Pertanian</div>
+          <div class="nc-excerpt">Kunjungan/inspeksi lapangan kepada pelaku usaha untuk memastikan kepatuhan pemenuhan persyaratan dan kewajiban dalam penyelenggaraan perizinan berusaha berbasis risiko.</div>
+          <a href="#" class="nc-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="MPP Rapat">
+          <span class="nc-cat">Pelayanan</span>
+        </div>
+        <div class="nc-body">
+          <div class="nc-meta"><span><i class="fas fa-calendar"></i>31 Januari 2024</span><span><i class="fas fa-user"></i>Admin</span></div>
+          <div class="nc-title">DPMPTSP Adakan Rapat Bersama Gerai yang Tergabung di Mal Pelayanan Publik Kabupaten Purbalingga</div>
+          <div class="nc-excerpt">Rapat koordinasi bersama lebih dari 40 gerai MPP Kabupaten Purbalingga guna meningkatkan mutu pelayanan terpadu satu atap bagi masyarakat Purbalingga.</div>
+          <a href="#" class="nc-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Ombudsman Supervisi">
+          <span class="nc-cat">Inovasi</span>
+        </div>
+        <div class="nc-body">
+          <div class="nc-meta"><span><i class="fas fa-calendar"></i>08 Agustus 2024</span><span><i class="fas fa-user"></i>Admin</span></div>
+          <div class="nc-title">Ombudsman Jawa Tengah Lakukan Supervisi Penilaian Kepatuhan Pelayanan Publik di MPP dan DPMPTSP Purbalingga</div>
+          <div class="nc-excerpt">Supervisi penilaian kepatuhan standar pelayanan publik dilakukan oleh Ombudsman Perwakilan Jawa Tengah untuk memastikan kualitas layanan yang prima kepada masyarakat.</div>
+          <a href="#" class="nc-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PENGUMUMAN -->
+    <div class="sec-head" style="margin-top:16px;"><h3><i class="fas fa-bullhorn" style="margin-right:6px;color:#fa7114;"></i>Pengumuman</h3><a href="#" class="more">Semua Pengumuman &raquo;</a></div>
+    <div class="ann-list">
+      <div class="ann-item">
+        <div class="ann-date"><strong>07</strong><span>Feb</span></div>
+        <div class="ann-text">
+          <h4>Bupati dan Wakil Bupati Purbalingga Gelar Acara Silaturahmi dan Pamitan di DPMPTSP serta Mal Pelayanan Publik Purbalingga</h4>
+          <p>Dalam kesempatan tersebut disampaikan arahan dan harapan untuk peningkatan pelayanan publik yang lebih baik kedepannya kepada seluruh jajaran pegawai.</p>
+        </div>
+      </div>
+      <div class="ann-item">
+        <div class="ann-date"><strong>03</strong><span>Mar</span></div>
+        <div class="ann-text">
+          <h4>MPP Purbalingga Umumkan Perubahan Jam Operasional Selama Bulan Ramadhan 1446 H</h4>
+          <p>Menyambut datangnya bulan Ramadhan, MPP Purbalingga mengumumkan perubahan jam operasional untuk memberikan pelayanan terbaik bagi masyarakat.</p>
+        </div>
+      </div>
+      <div class="ann-item">
+        <div class="ann-date"><strong>13</strong><span>Mar</span></div>
+        <div class="ann-text">
+          <h4>Instruksi Bupati Purbalingga: Setiap Pukul 10.00 WIB Seluruh Pegawai dan Pengunjung Menyanyikan Lagu Nasional</h4>
+          <p>Bupati Purbalingga Fahmi Muhammad Hanif mengeluarkan instruksi dalam rangka meningkatkan semangat nasionalisme di lingkungan pemerintahan Purbalingga.</p>
+        </div>
+      </div>
+      <div class="ann-item">
+        <div class="ann-date"><strong>08</strong><span>Apr</span></div>
+        <div class="ann-text">
+          <h4>Koordinasi DPMPTSP dan DPUPR terkait RDTR untuk Lokasi Apotek yang Akan Dibangun di Purbalingga</h4>
+          <p>Koordinasi Rencana Detail Tata Ruang (RDTR) dilakukan guna mendukung perkembangan usaha apotek dan sektor kesehatan di Kabupaten Purbalingga.</p>
+        </div>
+      </div>
+      <div class="ann-item">
+        <div class="ann-date"><strong>03</strong><span>Mar</span></div>
+        <div class="ann-text">
+          <h4>MPP Purbalingga Catat 3.065 Pengunjung Sepanjang Bulan Februari 2025</h4>
+          <p>Mal Pelayanan Publik Purbalingga mencatatkan jumlah kunjungan yang signifikan yang menunjukkan tingginya antusiasme masyarakat terhadap berbagai layanan publik.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-link"></i> Link Layanan</div>
+      <div class="wid-body">
+        <ul class="link-list">
+          <li><a href="#"><i class="fas fa-angle-right"></i> OSS – Online Single Submission</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> SiPurba – Perizinan Online</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> SIPP – Standar Pelayanan</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Laporan LKPM Online</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Survey Kepuasan Masyarakat</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Pengaduan SP4N LAPOR</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Mal Pelayanan Publik</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> PPID Kabupaten Purbalingga</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> Portal Purbalinggakab.go.id</a></li>
+          <li><a href="#"><i class="fas fa-angle-right"></i> JDIH Kabupaten Purbalingga</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-chart-bar"></i> Statistik Layanan 2024</div>
+      <div class="wid-body">
+        <div class="stat-grid">
+          <div class="stat-item"><div class="stat-num">4.287</div><div class="stat-label">Total Izin Terbit</div></div>
+          <div class="stat-item"><div class="stat-num">1.564</div><div class="stat-label">NIB Terbit</div></div>
+          <div class="stat-item"><div class="stat-num">98,2%</div><div class="stat-label">Kepuasan Masyarakat</div></div>
+          <div class="stat-item" style="background:linear-gradient(135deg,#c0392b,#e74c3c)"><div class="stat-num">326</div><div class="stat-label">Investor Baru</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-images"></i> Galeri Foto</div>
+      <div class="wid-body">
+        <div class="galeri-grid">
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=200&q=70" alt="Galeri"></div>
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&q=70" alt="Galeri"></div>
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=200&q=70" alt="Galeri"></div>
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=200&q=70" alt="Galeri"></div>
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&q=70" alt="Galeri"></div>
+          <div class="galeri-cell"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&q=70" alt="Galeri"></div>
+        </div>
+        <div style="text-align:right;margin-top:9px;"><a href="#" style="font-size:11.5px;color:#55b6cd;font-weight:700;">Lihat Semua Foto <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-calendar-check"></i> Agenda Kegiatan</div>
+      <div class="wid-body">
+        <ul class="agenda-list">
+          <li><div class="ag-dot"></div><div class="ag-info"><span class="ag-date">25 Maret 2026</span>Sosialisasi Kemudahan Berusaha bagi UMKM Kabupaten Purbalingga</div></li>
+          <li><div class="ag-dot"></div><div class="ag-info"><span class="ag-date">28 Maret 2026</span>Bimtek Penggunaan Aplikasi OSS RBA Berbasis Risiko</div></li>
+          <li><div class="ag-dot"></div><div class="ag-info"><span class="ag-date">02 April 2026</span>Rapat Koordinasi Penanaman Modal Kabupaten Purbalingga</div></li>
+          <li><div class="ag-dot"></div><div class="ag-info"><span class="ag-date">10 April 2026</span>Forum Investasi dan Kemudahan Berusaha Jawa Tengah</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-map-marker-alt"></i> Kontak Kami</div>
+      <div class="wid-body">
+        <ul class="kontak-list">
+          <li><i class="fas fa-map-marker-alt"></i>Jl. Mayjend Sungkono KM. 2 Kalimanah, Purbalingga 53371</li>
+          <li><i class="fas fa-phone"></i>Telp/Fax: (0281) 891-235</li>
+          <li><i class="fas fa-envelope"></i>dpmptsp@purbalinggakab.go.id</li>
+          <li><i class="fab fa-whatsapp"></i>WhatsApp Konsultasi: Goa Lawa</li>
+          <li><i class="fas fa-clock"></i><span>Sen–Kam: 07.30–15.30 WIB<br>Jumat: 07.30–11.00 WIB</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="wid-head"><i class="fas fa-external-link-alt"></i> Link Terkait</div>
+      <div class="wid-body">
+        <div class="mitra-grid">
+          <div class="mitra-btn">Kab. Purbalingga</div>
+          <div class="mitra-btn">OSS BKPM RI</div>
+          <div class="mitra-btn">BKPM RI</div>
+          <div class="mitra-btn">Kemendagri</div>
+          <div class="mitra-btn">Prov. Jateng</div>
+          <div class="mitra-btn">MPP Pbg</div>
+          <div class="mitra-btn">Bank Jateng</div>
+          <div class="mitra-btn">BAKEUDA Pbg</div>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+</div><!-- end #main -->
+
+<!-- FOOTER TOP -->
+<footer id="footer-top">
+  <div class="wrap">
+    <div class="fw">
+      <div class="fw-logo-wrap">
+        <img src="https://dpmptsp.purbalinggakab.go.id/wp-content/uploads/2022/11/LOGO-DPMPTSP.png"
+             alt="Logo DPMPTSP" class="fw-logo"
+             onerror="this.style.display='none';">
+        <div class="fw-site-name">DPMPTSP<br>Kabupaten Purbalingga</div>
+      </div>
+      <h4>Tentang Kami</h4>
+      <p>Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu Kabupaten Purbalingga adalah instansi yang menyelenggarakan pelayanan perizinan dan non-perizinan secara terpadu satu pintu di Kabupaten Purbalingga, Jawa Tengah.</p>
+      <div class="fw-contact-line"><i class="fas fa-map-marker-alt"></i>Jl. Mayjend Sungkono KM,2 Kalimanah Telp/Fax 0281-891235 Purbalingga 53371</div>
+      <div class="fw-contact-line"><i class="fas fa-envelope"></i>dpmptsp@purbalinggakab.go.id</div>
+      <div class="social-row">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="fw">
+      <h4>Profil</h4>
+      <ul>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Sejarah</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Visi &amp; Misi</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Tugas &amp; Fungsi</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Struktur Organisasi</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Pejabat DPMPTSP</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Maklumat Pelayanan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Zona Integritas</a></li>
+      </ul>
+    </div>
+    <div class="fw">
+      <h4>Layanan</h4>
+      <ul>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Jenis Perizinan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Persyaratan Izin</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Alur Perizinan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> OSS Online</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> SiPurba App</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> LKPM Online</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Download Formulir</a></li>
+      </ul>
+    </div>
+    <div class="fw">
+      <h4>Informasi</h4>
+      <ul>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Berita Terbaru</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Pengumuman</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Agenda Kegiatan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Galeri Foto</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> FAQ</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Laporan Tahunan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Pengaduan (LAPOR)</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- FOOTER BOTTOM -->
+<div id="footer-bottom">
+  <p>
+    Copyright &copy; 2026 <strong>DPMPTSP Kabupaten Purbalingga</strong>. All Rights Reserved.
+    &nbsp;|&nbsp; Di Desain Oleh <a href="#">Dinas Komunikasi dan Informatika Kabupaten Purbalingga</a>
+    &nbsp;|&nbsp; <a href="#">Pemerintah Daerah Kabupaten Purbalingga</a>
+  </p>
+</div>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+let cur=0;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('#sliderDots span');
+let timer;
+function show(n){
+  slides[cur].classList.remove('active');dots[cur].classList.remove('active');
+  cur=(n+slides.length)%slides.length;
+  slides[cur].classList.add('active');dots[cur].classList.add('active');
+}
+function changeSlide(d){show(cur+d);reset();}
+function goSlide(n){show(n);reset();}
+function reset(){clearInterval(timer);timer=setInterval(()=>show(cur+1),5500);}
+reset();
+window.addEventListener('scroll',()=>{
+  document.getElementById('btt').style.display=window.scrollY>350?'flex':'none';
+});
+</script>
+</body>
+</html>
